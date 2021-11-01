@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layerType="none"
+    android:visibility="visible"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_Registrar2"
+        android:layout_width="175dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="ClearView"
+        android:scrollbarStyle="outsideOverlay"
+        android:text="LIMPIAR"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textSelectHandleLeft="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Registro" />
+
+    <Button
+        android:id="@+id/btn_Mostrar"
+        android:layout_width="175dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="8dp"
+        android:onClick="Mostrar"
+        android:text="MOSTRAR"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.936"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_Telefono" />
+
+    <Spinner
+        android:id="@+id/sp_Muni"
+        android:layout_width="174dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.932"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_Apellido" />
+
+    <TextView
+        android:id="@+id/et_Datos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="INTRODUZCA SUS DATOS"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="87dp" />
+
+    <EditText
+        android:id="@+id/et_Apellido"
+        android:layout_width="174dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-medium"
+        android:hint="Apellido"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.659"
+        app:layout_constraintStart_toEndOf="@+id/et_Nombre"
+        app:layout_constraintTop_toBottomOf="@+id/et_Datos" />
+
+    <EditText
+        android:id="@+id/et_Nombre"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="174dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-medium"
+        android:hint="Nombre"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_Datos" />
+
+    <Spinner
+        android:id="@+id/sp_Depart"
+        android:layout_width="174dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_Nombre" />
+
+    <RadioGroup
+        android:id="@+id/rb_Sexo"
+        android:layout_width="230dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="160dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.591"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_Datos">
+
+        <RadioButton
+            android:id="@+id/rb_Masculino"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Masculino" />
+
+        <RadioButton
+            android:id="@+id/rb_Femenino"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Femenino" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/et_Telefono"
+        android:layout_width="287dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-medium"
+        android:hint="Numero Telefonico"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rb_Sexo" />
+
+    <Button
+        android:id="@+id/btn_Registrar"
+        android:layout_width="175dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="8dp"
+        android:onClick="Guardar"
+        android:scrollbarStyle="outsideOverlay"
+        android:text="REGISTRAR"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textSelectHandleLeft="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_Telefono" />
+
+    <TextView
+        android:id="@+id/tv_Registro"
+        android:layout_width="375dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Mostrar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
